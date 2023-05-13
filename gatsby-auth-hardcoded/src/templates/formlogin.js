@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Icons from "../components/icons";
 
 const FormLogin = () => {
@@ -10,14 +10,14 @@ const FormLogin = () => {
         <form >
             <div>
                 <div>
-                    <input type="text" placeholder="username" />
-                    <label>username</label>
+                    <input type="text" placeholder="username" name="username" />
+                    <label htmlFor="username">username</label>
                 </div>
                 <div>
-                    <input type={ text && true ? "text": "password"} placeholder="password" />
-                    <label>password</label>
+                    <input type={ text && true ? "text": "password"} placeholder="password" name="password"/>
+                    <label htmlFor="password">password</label>
                     <span >
-                        <div id="eye" className="eye" tabIndex="0" onClick={textHandle}>
+                        <div id="eye" className="eye"  onClick={textHandle} onKeyDown={textHandle} role="button" tabIndex={0}>
                             <div className="close-eye">
                                 <Icons 
                                     icon={"eyeclose"}
