@@ -8,5 +8,13 @@
  * @type {import('gatsby').GatsbyConfig}
  */
 module.exports = {
-  plugins: [],
+  plugins: [
+    `gatsby-plugin-emotion`,
+    {
+      resolve:'gatsby-plugin-manifest',
+      options: {
+        icon:'static/icon.png'
+      }
+    }
+  ],
 }
